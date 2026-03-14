@@ -708,7 +708,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Update URL for the button
             const hashtagsParam = selectedHashtags.map(h => encodeURIComponent(h)).join(',');
-            createMastowallBtn.href = `https://rstockm.github.io/mastowall/?hashtags=${hashtagsParam}&server=https://mastodon.social`;
+            createMastowallBtn.href = `https://cogneon.github.io/mastowall/?hashtags=${hashtagsParam}&server=https://mastodon.social`;
         }
     }
     
