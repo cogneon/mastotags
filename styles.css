@@ -1,0 +1,282 @@
+/* General Styles */
+body {
+    background-color: #f7f9fc;
+}
+
+/* Header */
+header h1 {
+    color: #563acc;
+    font-weight: bold;
+}
+
+/* Hashtag Cards */
+.hashtag-card {
+    transition: transform 0.2s;
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.hashtag-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #f8f9fa;
+}
+
+.hashtag-content {
+    width: 100%;
+}
+
+/* Hashtag Name */
+.hashtag-name {
+    font-weight: bold;
+    color: #563acc;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    min-width: 120px;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hashtag-name:hover {
+    color: #4229a3;
+    text-decoration: underline;
+}
+
+.hashtag-name:hover::after {
+    content: '\2197';
+    font-size: 0.8em;
+    margin-left: 4px;
+    opacity: 0.7;
+}
+
+/* Count Badge */
+.hashtag-count {
+    background-color: #563acc;
+    color: white;
+    padding: 1px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    min-width: 30px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Progress Bar Container */
+.progress-container {
+    flex: 1;
+    margin: 0 4px;
+    display: flex;
+    align-items: center;
+}
+
+/* Progress Bar */
+.progress {
+    height: 18px;
+    border-radius: 10px;
+    background-color: #e9ecef;
+    margin: 0;
+    width: 100%;
+}
+
+.progress-bar {
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+/* Checkbox for Hashtag Selection */
+.form-check {
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+    margin-left: 30px;
+}
+
+.hashtag-checkbox {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.hashtag-checkbox:checked {
+    background-color: #563acc;
+    border-color: #563acc;
+}
+
+/* Create Mastowall Button */
+#create-mastowall-btn {
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+    padding: 0.25rem 0.75rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+#create-mastowall-btn:not(.disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Ensure header action buttons are vertically centered */
+.card-header .action-button {
+    display: inline-flex;
+    align-items: center;
+}
+
+.selection-info {
+    margin-top: 10px;
+}
+
+/* Header Grid Layout for robust vertical alignment */
+.header-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-title {
+    grid-column: 1;
+}
+
+.header-legend {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+}
+
+.header-actions {
+    grid-column: 3;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Legend */
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.75rem;
+    align-items: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    white-space: nowrap;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    margin-right: 4px;
+}
+
+/* Loading Indicator */
+#loading {
+    padding: 20px;
+}
+
+/* Color Coding for Hashtag Popularity */
+.popularity-original {
+    border-left: 4px solid #563acc;
+    background-color: rgba(86, 58, 204, 0.05);
+}
+
+.popularity-high {
+    border-left: 4px solid #28a745;
+}
+
+.popularity-medium {
+    border-left: 4px solid #ffc107;
+}
+
+.popularity-low {
+    border-left: 4px solid #6c757d;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .legend {
+        margin-top: 8px;
+    }
+    
+    .hashtag-name {
+        min-width: 80px;
+        max-width: 120px;
+        font-size: 0.9rem;
+    }
+    
+    .card-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* Mobil-spezifische Verbesserungen */
+    .container, .container-fluid {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+    
+    .content-container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        max-width: 100% !important;
+    }
+    
+    .col-md-8 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .card {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+    
+    /* Kompaktere Buttons auf mobilen Geräten */
+    .action-button {
+        padding: 0.25rem 0.5rem !important;
+        font-size: 0.85rem !important;
+    }
+    
+    #copy-url-btn .button-text {
+        display: none !important;
+    }
+    
+    #copy-url-btn i {
+        margin-right: 0 !important;
+    }
+    
+    #create-mastowall-btn {
+        padding-right: 0.5rem !important;
+    }
+    
+    .action-button i {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Kompaktere Hashtag-Karten */
+    .hashtag-card {
+        padding: 8px 10px;
+    }
+    
+    /* Kleinere Schriftgrößen */
+    .lead {
+        font-size: 1rem;
+    }
+} 
