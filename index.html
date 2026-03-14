@@ -48,7 +48,7 @@
         
         /* Header matching Mastowall style */
         .site-header {
-            background-color: #2b2d42;
+            background-color: #ff6600;
             color: white;
             padding: 15px 0;
             text-align: center;
@@ -150,14 +150,14 @@
                     <div class="card-body">
                         <form id="search-form">
                             <div class="mb-3">
-                                <label for="search-term" class="form-label">Topic, Event or Hashtag</label>
+                                <label for="search-term" class="form-label">Thema, Veranstaltung oder Hashtag</label>
                                 <div class="input-group">
                                     <span class="input-group-text">#</span>
                                     <input type="text" class="form-control" id="search-term" 
                                            placeholder="e.g. esc2025, elections, olympics" required>
                                     <button type="submit" class="btn btn-primary">Search</button>
                                 </div>
-                                <small class="form-text text-muted">You can search without # too, e.g. "Eurovision" or "esc2025"</small>
+                                <small class="form-text text-muted">Du kannst auch ohne # suchen, z. B. „Eurovision“ oder „clc26“</small>
                             </div>
                         </form>
                     </div>
@@ -172,25 +172,25 @@
                         <div class="card-header">
                             <div class="header-grid">
                                 <div class="header-title">
-                                    <h5 class="mb-0">Popular Hashtags</h5>
+                                    <h5 class="mb-0">Beliebte Hashtags</h5>
                                 </div>
                                 <div class="header-legend">
                                     <div class="legend">
                                         <span class="legend-item">
                                             <span class="legend-color bg-primary"></span>
-                                            Your Search
+                                            Deine Suche
                                         </span>
                                         <span class="legend-item">
                                             <span class="legend-color bg-success"></span>
-                                            Very Popular
+                                            Sehr beliebt
                                         </span>
                                         <span class="legend-item">
                                             <span class="legend-color bg-warning"></span>
-                                            Moderate
+                                            Mäßig
                                         </span>
                                         <span class="legend-item">
                                             <span class="legend-color bg-secondary"></span>
-                                            Less Common
+                                            Weniger verbreitet
                                         </span>
                                     </div>
                                 </div>
@@ -199,7 +199,7 @@
                                         <i class="bi bi-display me-2"></i>Mastowall
                                     </a>
                                     <a id="copy-url-btn" href="#" class="btn btn-outline-primary action-button ms-2 disabled" aria-disabled="true">
-                                        <i class="bi bi-link me-2"></i>Copy URL
+                                        <i class="bi bi-link me-2"></i>URL kopieren
                                     </a>
                                 </div>
                             </div>
@@ -207,21 +207,21 @@
                         <div class="card-body">
                             <div id="loading" class="text-center d-none">
                                 <div class="spinner-border text-primary" role="status">
-                                    <span class="visually-hidden">Loading...</span>
+                                    <span class="visually-hidden">Laden...</span>
                                 </div>
-                                <p>Running extended hashtag analysis...</p>
-                                <small class="text-muted">This process may take a few seconds</small>
+                                <p>Durchführung einer erweiterten Hashtag-Analyse...</p>
+                                <small class="text-muted">Dieser Vorgang kann einige Sekunden dauern</small>
                             </div>
                             <div class="selection-info mb-3">
                                 <small class="text-muted">
-                                    <i class="bi bi-info-circle"></i> Select up to 3 hashtags for your Mastowall
+                                    <i class="bi bi-info-circle"></i> Wähle bis zu 3 Hashtags für deine Mastowall aus
                                 </small>
                             </div>
                             <ul id="hashtags-list" class="list-group"></ul>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">
-                                <i class="bi bi-info-circle"></i> Based on public toots from mastodon.social and related hashtags
+                                <i class="bi bi-info-circle"></i> Basierend auf öffentlichen Toots von mastodon.social und zugehörigen Hashtags
                             </small>
                         </div>
                     </div>
