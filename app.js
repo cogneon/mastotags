@@ -554,7 +554,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const hashtagLink = document.createElement('a');
             hashtagLink.className = 'hashtag-name me-3';
             const encodedName = encodeURIComponent(sanitizedName);
-            hashtagLink.href = `https://rstockm.github.io/mastowall/?hashtags=${encodedName}&server=https://mastodon.social`;
+            hashtagLink.href = `https://cogneon.github.io/mastowall/?hashtags=${encodedName}&server=https://mastodon.social`;
             hashtagLink.target = '_blank';
             hashtagLink.rel = 'noopener noreferrer';
             hashtagLink.textContent = `#${sanitizedName}`;
@@ -660,7 +660,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Check if 3 hashtags are already selected
             if (selectedHashtags.length >= MAX_SELECTED_HASHTAGS) {
                 // Show warning
-                alert(`You can select a maximum of ${MAX_SELECTED_HASHTAGS} hashtags. Please deselect another hashtag first.`);
+                alert(`Du kannst maximal ${MAX_SELECTED_HASHTAGS} hashtags auswählen. Bitte wähle einen anderen Hashtag ab.`);
                 
                 // Uncheck the checkbox
                 checkbox.checked = false;
